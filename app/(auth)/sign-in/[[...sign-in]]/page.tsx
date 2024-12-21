@@ -1,5 +1,14 @@
 import { SignIn } from "@clerk/nextjs";
 
 export default function Page() {
-  return <SignIn />;
+  return (
+    <div
+      data-theme="dark"
+      className="flex items-center justify-center min-h-screen bg-base-100"
+    >
+      <SignIn />
+    </div>
+  );
 }
+
+
