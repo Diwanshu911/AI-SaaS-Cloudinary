@@ -5,6 +5,8 @@ import dayjs from 'dayjs';
 import realtiveTime from "dayjs/plugin/relativeTime"
 import {filesize} from "filesize"
 import { Video } from '@/types';
+import Image from "next/image";
+
 
 dayjs.extend(realtiveTime)
 
@@ -94,9 +96,16 @@ const  VideoCard: React.FC<VideoCardProps> = ({video, onDownload}) => {
                 />
               )
             ) : (
-              <img
+              // <img
+              //   src={getThumbnailUrl(video.publicId)}
+              //   alt={video.title}
+              //   className="w-full h-full object-cover"
+              // />
+              <Image
                 src={getThumbnailUrl(video.publicId)}
                 alt={video.title}
+                width={400} // Specify the width
+                height={225} // Specify the height
                 className="w-full h-full object-cover"
               />
             )}
