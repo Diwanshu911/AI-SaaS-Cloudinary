@@ -177,6 +177,7 @@ export async function POST(request: NextRequest) {
         originalSize: originalSize,
         compressedSize: String(result.bytes),
         duration: result.duration || 0,
+        userId: userId, // 👈 This connects the video to the signed-in user
       },
     });
 

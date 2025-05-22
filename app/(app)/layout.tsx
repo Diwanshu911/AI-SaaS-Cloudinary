@@ -11,7 +11,6 @@ import {
   LayoutDashboardIcon,
   Share2Icon,
   UploadIcon,
-  ImageIcon,
 } from "lucide-react";
 
 const sidebarItems = [
@@ -108,7 +107,14 @@ export default function AppLayout({
         <label htmlFor="sidebar-drawer" className="drawer-overlay"></label>
         <aside className="bg-base-200 w-64 h-full flex flex-col">
           <div className="flex items-center justify-center py-4">
-            <ImageIcon className="w-10 h-10 text-primary" />
+            <Image
+              src="/logo.png" 
+              alt="App Logo"
+              width={50}
+              height={50}
+              className="rounded-full"
+              priority
+            />
           </div>
           <ul className="menu p-4 w-full text-base-content flex-grow">
             {sidebarItems.map((item) => (
